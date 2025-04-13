@@ -1,0 +1,29 @@
+FIR filter Design
+
+In MATLAB
+
+1. Enter filterDesigner in MATLAB command window
+2. It opens a filter designer window.
+3. Select following options:  
+    a. bandpass
+    b. FilterOrder = Minimum
+    c. Density factor = 20
+    d. Frequency spec :  Sampling freq = 48000, fstop1 = 500, fpass1 = 1500, fpass2 = 8000 ; fstop2 = 9000
+   
+ 4. Press design filter.
+ 5. You can see filter response plot with band-pass characteristics
+ 6. Go to File->Export  and export MATLAB file. This will store all filter coefficients.
+ 
+ 7. Write a MATLAB code to
+     a. read the above values into a variable by using load command. Consider 20 filter coefficients
+     b. convert them into fixed point Q(2,14). Store these values into a file.
+     c. Generate 4 sinewaves of 100Hz, 2000Hz, 6000Hz, 11000Hz and sample at 48000Hz. consider 5 cycles
+     d. Convert these values into Q(2,14)format and store them into file(s).
+ 8. Write MATLAB code to get the output for these 4 signals using the designed filter (consider 20 filter coefficients). Plot outputs for 4 signals
+ 
+ In Verilog
+ 
+ 1. read filter coefficients file and 4 signal files
+ 2. write modules to find  output values for each of the signal, when the given filter is applied
+ 3. Store Output results into different files.
+ 4. Read the output values in MATLAB and make plots and verify that output plots match with those from MATLAB.
